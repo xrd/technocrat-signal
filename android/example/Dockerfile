@@ -25,7 +25,7 @@ RUN unzip -o gradle.zip
 
 # Environment variables
 ENV ANDROID_HOME /usr/local/android-sdk-linux
-# ENV GRADLE_HOME /usr/local/gradle-1
+ENV GRADLE_HOME /usr/local/gradle-2.13
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 ENV PATH $PATH:$GRADLE_HOME/bin
