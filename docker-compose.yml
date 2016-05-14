@@ -4,6 +4,10 @@ hubot:
 android:
   build: android
   command: echo "Hi"
+  volumes:
+  - ./android/src:/src
+  - ./android/android-utils:/usr/local/android-utils
+  working_dir: /src
 classifier:
   build: classifier
   command: ruby --version

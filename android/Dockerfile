@@ -29,7 +29,11 @@ ENV GRADLE_HOME /usr/local/gradle-2.13
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 ENV PATH $PATH:$GRADLE_HOME/bin
+ENV PATH $PATH:/usr/local/android-utils
 
 # Clean up
 RUN rm -rf /usr/local/android.tgz
 
+RUN apt-get install -y ruby # Use ruby for the creation script
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui -t android-19 --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui -t build-tools-23.0.1 --force -a
