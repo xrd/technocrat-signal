@@ -1,0 +1,10 @@
+hubot:
+  build: hubot
+  command: HUBOT_SLACK_TOKEN=xoxb-1234-5678-91011-00e4dd ./bin/hubot --adapter slack
+android:
+  build: android
+  command: echo "Hi"
+classifier:
+  build: classifier
+  command: ruby --version
+    
