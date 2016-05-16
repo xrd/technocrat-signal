@@ -54,13 +54,12 @@ puts "Command: #{command}"
 # Update build.gradle
 # Update app/build.gradle
 # Move directories to support gradle
-FileUtils.mkdir "#{path}/app"
 FileUtils.mkdir_p "#{path}/app/src/main/java"
-FileUtils.mkdir_p "#{path}/app/src/main/res"
 FileUtils.mv "#{path}/src", "#{path}/app/src/main/java/."
 FileUtils.mv "#{path}/res", "#{path}/app/src/main/."
 FileUtils.mv "#{path}/AndroidManifest.xml", "#{path}/app/src/main/."
-FileUtils.cp "#{path}/../example/app/build.gradle", "app/."
-FileUtils.cp "#{path}/../example/settings.gradle", "."
+FileUtils.cp "#{path}/../foobar/app/build.gradle", "#{path}/app/."
+FileUtils.cp "#{path}/../foobar/build.gradle", "#{path}/."
+FileUtils.cp "#{path}/../foobar/settings.gradle", "#{path}/."
 
 
