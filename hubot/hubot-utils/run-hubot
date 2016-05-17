@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /home/hubot/hubots/$1
+export PATH=./node_modules/.bin:$PATH
+export `cat hubot-credentials.txt`
+hubot --adapter slack

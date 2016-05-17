@@ -1,6 +1,9 @@
 hubot:
   build: hubot
-  command: HUBOT_SLACK_TOKEN=xoxb-1234-5678-91011-00e4dd ./bin/hubot --adapter slack
+  # command: ./bin/hubot --adapter slack
+  volumes:
+  - ./hubot/hubots:/home/hubot/hubots
+  - ./hubot/hubot-utils:/usr/local/hubot-utils
 android:
   build: android
   command: echo "Hi"
@@ -10,5 +13,7 @@ android:
   working_dir: /src
 classifier:
   build: classifier
-  command: ruby --version
-    
+  # command: ruby --version
+  ports:
+    - "8000:8000"
+  command: ruby -rsinatra -e'set :public_folder, "."; set :port, 8000; set :bind, "0.0.0.0"'

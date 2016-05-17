@@ -42,7 +42,8 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui -t bu
 # Need to install 32 bit for android tools like aapt and adb
 RUN apt-get -y install gcc-multilib lib32z1 lib32stdc++6
 
-WORKDIR /src/foobar
-RUN gradle tasks
-RUN gradle assembleDebug --info
+# Trying to get this to build and cache files (and eventually daemonize...)
+# WORKDIR /src/foobar
+# RUN gradle tasks
+# RUN gradle assembleDebug --info
 

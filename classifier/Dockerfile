@@ -2,4 +2,6 @@ FROM ruby:2.1-onbuild
 
 # RUN gem install classifier
 
-# CMD 
+EXPOSE 8000
+CMD 
+
