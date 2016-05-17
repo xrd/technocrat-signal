@@ -1,2 +1,8 @@
 
 android/src
+hubot/hubot-credentials.txt
+hubot-credentials.txt
+hubot/hubots
+android/.idea
+android/android.iml
+*~
