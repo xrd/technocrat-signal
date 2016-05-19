@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Creating hubot in $1"
+cd /home/hubot/hubots
+mkdir -p $1
+cd $1
+npm install coffee-script yo generator-hubot hubot
+yo hubot --defaults
+npm install hubot-slack --save
