@@ -1,5 +1,11 @@
 # Technocrat Signal
 
+## Build a Technocrat Signal
+
+When your coding is in distress, put out the technocrat signal and get immediate help!
+
+!(technocrat-signal.png)[]
+
 To use, install the [Docker Toolbox](https://www.docker.com/products/docker-toolbox) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
 Make sure you are using at least these versions:
