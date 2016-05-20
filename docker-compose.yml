@@ -6,7 +6,6 @@ hubot:
   - ./hubot/hubot-utils:/usr/local/hubot-utils
 android:
   build: android
-  command: echo "Hi"
   volumes:
   - ./android/src:/src
   - ./android/android-utils:/usr/local/android-utils

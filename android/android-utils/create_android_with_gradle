@@ -41,19 +41,6 @@ puts "Command: #{command}"
 
 `#{command}`
 
-# Error:
-#A problem occurred configuring root project 'foobar'.
-#                                             > com.android.io.StreamException: java.io.FileNotFoundException: /src/foobar/src/main/AndroidManifest.xml (No such file or directory)
-
-# Now, align for gradle
-# FileUtils.mv
-# FileUtils.cp '/src/example/build.gradle'
-
-
-# Update local.properties
-# Update build.gradle
-# Update app/build.gradle
-# Move directories to support gradle
 FileUtils.mkdir_p "#{path}/app/src/main/java"
 FileUtils.mv "#{path}/src", "#{path}/app/src/main/java/."
 FileUtils.mv "#{path}/res", "#{path}/app/src/main/."
