@@ -2,7 +2,7 @@
 
 ## Build a Technocrat Signal
 
-When your coding is in distress, put out the technocrat signal and get immediate help!
+Developer in distress? Put out the technocrat signal and get immediate help from a superhero!
 
 ![](technocrat-signal.png)
 
