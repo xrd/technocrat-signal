@@ -6,6 +6,8 @@ When your coding is in distress, put out the technocrat signal and get immediate
 
 !(technocrat-signal.png)[]
 
+## Installation
+
 To use, install the [Docker Toolbox](https://www.docker.com/products/docker-toolbox) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
 Make sure you are using at least these versions:
