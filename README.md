@@ -6,6 +6,12 @@ When your coding is in distress, put out the technocrat signal and get immediate
 
 ![](technocrat-signal.png)
 
+## Components
+
+* a Hubot with Slack adapter (in coffeescript) that listens for developers in distress!
+* a classifier (in Ruby) that uses machine learning to understand which superhero to call!
+* an Android app that displays the technocrat signal to the right superhero!
+
 ## Installation
 
 To use, install the [Docker Toolbox](https://www.docker.com/products/docker-toolbox) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
