@@ -4,7 +4,7 @@
 
 When your coding is in distress, put out the technocrat signal and get immediate help!
 
-!(technocrat-signal.png)[]
+![](technocrat-signal.png)
 
 ## Installation
 
