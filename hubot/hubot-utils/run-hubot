@@ -2,5 +2,10 @@
 
 cd /home/hubot/hubots/$1
 export PATH=./node_modules/.bin:$PATH
-export `cat hubot-credentials.txt`
-hubot --adapter slack
+if [ -f hubot-credentials.txt ];
+   then
+       export `cat hubot-credentials.txt`
+       hubot --adapter slack
+else
+    echo "Need to place hubot-credentials.txt into the hubot/hubots/$1 directory"
+fi
