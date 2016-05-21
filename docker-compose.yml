@@ -4,12 +4,6 @@ hubot:
   volumes:
   - ./hubot/hubots:/home/hubot/hubots
   - ./hubot/hubot-utils:/usr/local/hubot-utils
-android:
-  build: android
-  volumes:
-  - ./android/src:/src
-  - ./android/android-utils:/usr/local/android-utils
-  working_dir: /src
 classifier:
   build: classifier
   # command: ruby --version
