@@ -1,0 +1,4 @@
+#!/bin/bash
+
+CURRENT=$(cat ./hubots/current-hubot.txt)
+run-hubot $CURRENT
