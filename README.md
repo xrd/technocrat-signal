@@ -40,3 +40,18 @@ $ cd technocrat-signal
 $ eval $(docker-machine env technocrat)
 $ docker-compose build  # go get a coffee
 ```
+
+## Create a hubot
+
+```
+$ docker-machine run hubot create-hubot myfirsthubot
+$ echo 'myfirsthubot' >> hubot/hubots/current-hubot.txt # Tell "docker-compose up" to use this hubot
+```
+
+## Start the Docker Appliance
+
+```
+$ docker-machine up
+```
+
+This starts the classifier, and the "current" hubot backed by a redis for persisting the brain.

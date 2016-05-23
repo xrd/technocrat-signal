@@ -1,18 +1,15 @@
 hubot:
   build: hubot
-  # command: ./bin/hubot --adapter slack
   volumes:
   - ./hubot/hubots:/home/hubot/hubots
   - ./hubot/hubot-utils:/usr/local/hubot-utils
-android:
-  build: android
-  volumes:
-  - ./android/src:/src
-  - ./android/android-utils:/usr/local/android-utils
-  working_dir: /src
+  links:
+    - redis
+  command: run-current-hubot
+redis:
+  image: redis
 classifier:
   build: classifier
-  # command: ruby --version
   ports:
-    - "8000:8000"
-  command: ruby -rsinatra -e'set :public_folder, "."; set :port, 8000; set :bind, "0.0.0.0"'
+    - "4567:4567"
+  command: ruby classifier.rb

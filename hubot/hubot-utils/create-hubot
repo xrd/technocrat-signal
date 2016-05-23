@@ -8,3 +8,5 @@ cd $1
 # npm install coffee-script yo generator-hubot hubot
 echo y | yo hubot --defaults
 npm install hubot-slack --save
+npm install hubot-redis-brain --save
+echo '[ "hubot-redis-brain" ]' > external-scripts.json

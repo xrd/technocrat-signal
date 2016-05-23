@@ -2,6 +2,7 @@
 
 cd /home/hubot/hubots/$1
 export PATH=./node_modules/.bin:$PATH
+export REDIS_URL=$REDIS_PORT
 if [ -f hubot-credentials.txt ];
    then
        export `cat hubot-credentials.txt`
