@@ -70,3 +70,5 @@ $ docker-machine up
 ```
 
 This starts the classifier, and the "current" hubot backed by a redis for persisting the brain.
+
+Now, use the [Android app](https://github.com/xrd/technocrat-android/) to skip Slack completely.
