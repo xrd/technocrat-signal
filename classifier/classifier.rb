@@ -17,6 +17,7 @@ get '/' do
 end
 
 post '/train/:type' do
+  # call b.train_java or b.train_ruby (dynamically)
   b.send "train_#{params['type']}", params['code']
   json status: 'ok'
 end
