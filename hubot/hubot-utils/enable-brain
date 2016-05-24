@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /home/hubots/$1
+if [ -f hubot-credentials.txt ];
+      cp ../external-scripts-with-redis.json ./external-scripts.json
+else
+   echo "Not a valid directory: $1 (missing credentials file)"
+fi

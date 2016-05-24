@@ -6,3 +6,5 @@ hubot/hubots
 android/.idea
 android/android.iml
 *~
+.#*
+\#*#

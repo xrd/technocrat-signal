@@ -5,6 +5,7 @@ hubot:
   - ./hubot/hubot-utils:/usr/local/hubot-utils
   links:
     - redis
+    - classifier
   command: run-current-hubot
 redis:
   image: redis

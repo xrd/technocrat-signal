@@ -9,4 +9,5 @@ cd $1
 echo y | yo hubot --defaults
 npm install hubot-slack --save
 npm install hubot-redis-brain --save
-echo '[ "hubot-redis-brain" ]' > external-scripts.json
+# Don't do this, because it will cause our scripts to fail when running without redis
+#echo '[ "hubot-redis-brain" ]' > external-scripts.json
