@@ -44,8 +44,12 @@ $ docker-compose build  # go get a coffee
 ## Create a hubot
 
 ```
-$ docker-machine run hubot create-hubot myfirsthubot
+$ docker-compose run hubot create-hubot myfirsthubot
 $ echo 'myfirsthubot' >> hubot/hubots/current-hubot.txt # Tell "docker-compose up" to use this hubot
+$ echo 'HUBOT_SLACK_TOKEN=xx-12345' >> hubot/hubots/myfirsthubot/hubot-credentials.txt # establish credentials
+$ docker-compose run hubot run-hubot myfirsthubot # start it up without redis backed brain
+$ docker-compose run hubot enable-brain myfirsthubot # add [ "hubot-redis-brain" ] to external-scripts.json
+$ docker-compose up # start it all with redis turned on and the hubot connected
 ```
 
 ## Start the Docker Appliance
