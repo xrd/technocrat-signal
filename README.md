@@ -60,8 +60,10 @@ To run tests, create a spec directory and put tests in there. Then, run this com
 $ docker-compose run -w /home/hubot/hubots/withtests hubot jasmine-node --coffee spec/
 ```
 
-See an example of tests in this spec file [slack-utils.spec.coffee](/xrd/technocrat-signal/blob/master/hubot/hubots/withtests/spec/slack-utils.spec.coffee)
-and the [slack-utils.coffee library](/xrd/technocrat-signal/blob/master/hubot/hubots/withtests/lib/slack-utils.coffee) it tests.
+See an example of tests in this spec file
+
+[slack-utils.spec.coffee](/hubot/hubots/withtests/spec/slack-utils.spec.coffee)
+and the [slack-utils.coffee library](/hubot/hubots/withtests/lib/slack-utils.coffee) it tests.
 
 ## Start the Docker Appliance
 
