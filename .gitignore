@@ -2,7 +2,7 @@
 android/src
 hubot/hubot-credentials.txt
 hubot-credentials.txt
-hubot/current-hubot.txt
+hubot/hubots/current-hubot.txt
 android/.idea
 android/android.iml
 *~
