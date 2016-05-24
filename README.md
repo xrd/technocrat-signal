@@ -52,6 +52,17 @@ $ docker-compose run hubot enable-brain myfirsthubot # add [ "hubot-redis-brain"
 $ docker-compose up # start it all with redis turned on and the hubot connected
 ```
 
+Jasmine (test runner is bundled) and can be used to run tests for your hubot.
+To run tests, create a spec directory and put tests in there. Then, run this command
+(using the example `withtests` application).
+
+```
+$ docker-compose run -w /home/hubot/hubots/withtests hubot jasmine-node --coffee spec/
+```
+
+See an example of tests in this spec file [/xrd/technocrat-signal/blob/master/hubot/hubots/withtests/spec/slack-utils.spec.coffee](slack-utils.spec.coffee)
+and the [/xrd/technocrat-signal/blob/master/hubot/hubots/withtests/lib/slack-utils.coffee](slack-utils.coffee library) it tests.
+
 ## Start the Docker Appliance
 
 ```
