@@ -45,13 +45,13 @@ $ docker-compose build  # go get a coffee
 
 First, you need to create a hubot integration inside your slack site.
 
-![](integration.png)
+![](imgs/integration.png)
 
-![](add-configuration.png)
+![](imgs/add-configuration.png)
 
-![](create-configuration.png)
+![](imgs/create-configuration.png)
 
-![](search-for-hubot.png)
+![](imgs/search-for-hubot.png)
 
 Then, use the API key below when running these steps.
 

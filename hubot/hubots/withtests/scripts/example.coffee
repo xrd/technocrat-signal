@@ -1,16 +1,16 @@
 
 
-buildFileApiUrl = ( ref ) ->
-        # https://slack.com/api/files.info?token=xxx-123123123&file=F1AP7BS5T&pretty=1
-        "https://slack.com/api/files.info?token=" +
-        process.env.HUBOT_SLACK_TOKEN +
-        "&file=#{ref}&pretty=1"
-
-# Given this: https://webiphany.slack.com/files/xrd/F1AQK1BQQ/-.java
-# Get back this: F1AQK1BQQ
-getFileReference = ( url ) ->
-        chunks = url.split( '/' ) if url
-        chunks[chunks.length-2] # second to last item.
+# buildFileApiUrl = ( ref ) ->
+#         # https://slack.com/api/files.info?token=xxx-123123123&file=F1AP7BS5T&pretty=1
+#         "https://slack.com/api/files.info?token=" +
+#         process.env.HUBOT_SLACK_TOKEN +
+#         "&file=#{ref}&pretty=1"
+#
+# # Given this: https://webiphany.slack.com/files/xrd/F1AQK1BQQ/-.java
+# # Get back this: F1AQK1BQQ
+# getFileReference = ( url ) ->
+#         chunks = url.split( '/' ) if url
+#         chunks[chunks.length-2] # second to last item.
 
 module.exports = (robot) ->
 
@@ -37,9 +37,10 @@ module.exports = (robot) ->
 
         robot.hear /code confusion/, (res) ->
                 console.log "Input: ", res.match.input
-                fileReference = getFileReference( res.match.input )
+                slackApi = require( '../lib/slack-utils' )
+                fileReference = slackApi.getFileReference( res.match.input )
                 console.log "Ref: #{fileReference}"
-                slackApiUrl = buildFileApiUrl( fileReference )
+                slackApiUrl = slackApi.buildFileApiUrl( fileReference )
                 classifierApiUrl = "http://#{process.env.CLASSIFIER_1_PORT_4567_TCP_ADDR}:4567/classify"
                 console.log "Classifier URL: #{classifierApiUrl}"
 
