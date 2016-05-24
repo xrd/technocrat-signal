@@ -1,5 +1,8 @@
 
 
+
+initialized = false
+
 buildFileApiUrl = ( ref ) ->
         # https://slack.com/api/files.info?token=xxx-123123123&file=F1AP7BS5T&pretty=1
         "https://slack.com/api/files.info?token=" +
@@ -58,6 +61,10 @@ module.exports = (robot) ->
                                 res.send "Oops, my bad, recategorized that code as #{res.match[1]}"
 
         robot.router.get '/hubot/status', (req, res) ->
+                initialized = robot.brain.get 'initialized'
+                unless initialized
+                  for x in [ 'Java', 'Ruby' ]
+                    robot.brain.set x, "off"
+                  robot.brain.set 'initialized', true
                 # this is a private API, so could change!
                 res.send robot.brain.data._private
-                
