@@ -7,10 +7,12 @@ hubot:
     - redis
     - classifier
   command: run-current-hubot
+  ports:
+    - "8080:8080"
 redis:
   image: redis
 classifier:
   build: classifier
   ports:
     - "4567:4567"
-  command: ruby classifier.rb; train.sh
+  command: ruby classifier.rb
