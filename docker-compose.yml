@@ -13,4 +13,4 @@ classifier:
   build: classifier
   ports:
     - "4567:4567"
-  command: ruby classifier.rb
+  command: ruby classifier.rb; train.sh
