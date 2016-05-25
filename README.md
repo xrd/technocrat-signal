@@ -51,7 +51,13 @@ First, you need to create a hubot integration inside your slack site.
 * Add relevant information, like the slackbot username
 * Once your bot is up, you need to invite her/him to the channels you want them to participate in.
 
-![](imgs/integration.png)![](imgs/search-for-hubot.png)![](imgs/create-configuration.png)![](imgs/add-configuration.png)
+![](imgs/integration.png)
+
+![](imgs/search-for-hubot.png)
+
+![](imgs/create-configuration.png)
+
+![](imgs/add-configuration.png)
 
 Then, use the API key below when running these steps.
 
