@@ -45,13 +45,13 @@ $ docker-compose build  # go get a coffee
 
 First, you need to create a hubot integration inside your slack site.
 
-![](imgs/integration.png)
+* Click on the tick under your username inside the Slack browser client (you need to be an admin of the site)
+* Search for hubot and choose it when it comes up.
+* Create a new configuration
+* Add relevant information, like the slackbot username
+* Once your bot is up, you need to invite her/him to the channels you want them to participate in.
 
-![](imgs/add-configuration.png)
-
-![](imgs/create-configuration.png)
-
-![](imgs/search-for-hubot.png)
+![](imgs/integration.png)![](imgs/search-for-hubot.png)![](imgs/create-configuration.png)![](imgs/add-configuration.png)
 
 Then, use the API key below when running these steps.
 
