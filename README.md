@@ -76,7 +76,29 @@ To run tests, create a spec directory and put tests in there. Then, run this com
 
 ```
 $ docker-compose run -w /home/hubot/hubots/withtests hubot jasmine-node --coffee spec/
+.
+
+Finished in 0.008 seconds
+1 test, 1 assertion, 0 failures, 0 skipped
+
+
+
 ```
+
+Or, from inside a one-off container if you want.
+```
+$ docker-compose run hubot bash
+hubot@6eb956781ea:~# cd hubots/withtests
+hubot@6eb956781ea:~# jasmine-node --coffee spec
+hhhhhhubot@ff42a4ed1740:~/hubots/withtests$ jasmine-node --coffee spec
+.
+
+Finished in 0.008 seconds
+1 test, 1 assertion, 0 failures, 0 skipped
+
+```
+
+
 
 See an example of tests in this spec file [slack-utils.spec.coffee](/hubot/hubots/withtests/spec/slack-utils.spec.coffee)
 and the [slack-utils.coffee library](/hubot/hubots/withtests/lib/slack-utils.coffee) it tests.
