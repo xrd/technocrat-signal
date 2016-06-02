@@ -112,3 +112,16 @@ $ docker-machine up
 This starts the classifier, and the "current" hubot backed by a redis for persisting the brain.
 
 Now, use the [Android app](https://github.com/xrd/technocrat-android/) to skip Slack completely.
+
+### Enabling Docker for Android on a Real Device
+
+By default your docker machine will not be accessible to the outside world. You can port forward the Hubot status 
+using a bridged adapter.
+
+Follow these [instructions](https://github.com/docker/machine/issues/1491#issuecomment-172325129) to setup a bridged adapter.
+
+Then, run this command
+
+```
+$ VBoxManage controlvm technocrat natpf1 "hubot,tcp,,8080,,8080"
+```
