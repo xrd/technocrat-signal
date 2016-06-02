@@ -1,5 +1,7 @@
 # Technocrat Signal
 
+[Watch the 90 second video](https://youtu.be/32hAim6Y6K4).
+
 ## Build a Technocrat Signal
 
 Developer in distress? Put out the technocrat signal and get immediate help from a superhero!
