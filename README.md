@@ -12,7 +12,7 @@ Developer in distress? Put out the technocrat signal and get immediate help from
 
 * a Hubot with Slack adapter (in coffeescript) that listens for developers in distress!
 * a classifier (in Ruby) that uses machine learning to understand which superhero to call!
-* an Android app that displays the technocrat signal to the right superhero!
+* [an Android app](https://github.com/xrd/technocrat-android) that displays the technocrat signal to the right superhero!
 
 These components teach you about the most important parts of hubot:
 the Hubot API, the Hubot brain, the HTTP client, and the HTTP server.
